@@ -45,9 +45,9 @@ class Holl // обьект создается
     int CountOfSits;
     Holl_state s;
 public:
-    Holl();
+    /*Holl(); //поправить у всех 3-х конструкторах реализацию и написать ее
     Holl(Holl& h);
-    Holl(Film& F, CTime starttime, CTime finishtime, int countofsits, Holl_state s);
+    Holl(Film& F, CTime starttime, CTime finishtime, int countofsits, Holl_state s);*/
 
     ~Holl();
 
@@ -61,10 +61,7 @@ public:
     void setStartTime(CTime ST);
     void setFinishTime(Film f);
     void setCountOfSits(int count);
-    void setstates(int _s) {
-        if (_s == 3)
-        s = Not_Empty;
-    }
+    void setstates(int _s);*/
     Holl& operator=(const Holl& h) {
         f = h.f;
         StartTime = h.StartTime;
@@ -72,7 +69,7 @@ public:
         CountOfSits = h.CountOfSits;
         s = h.s;
         return *this;
-    }*/
+    }
 };
 
 class Admin //обьект создается
@@ -83,16 +80,17 @@ public:
     Admin(int id, CString password);
 
     ~Admin();
-    /*int get_id();
+    int get_id();
     CString get_password();
 
-    void set_id();
-    void set_password();
-    void createFilm();
-    void redactFilm();
-    void deleteFilm();
+    void set_id(int i);
+    void set_password(CString str);
+    Film createFilm();
+    Film createFilm(CTime timeofgoes, float rate, CString name, CString type, int costforticket, CDate livebefore);
+    void redactFilm(Film& f, int i);
+    void deleteFilm(Film& f);
 
-    void createHole();
+    /*void createHole();
     void redactHole();
     void deleteHoll();
 
@@ -119,7 +117,7 @@ class User //обьект создается
     Holls visits;
 public:
     /*User(); 
-    * User(int id, CString password, Holls visits);
+    User(int id, CString password, Holls visits);
 
     ~User();
 
@@ -148,10 +146,10 @@ public:
 
     ~Cinema();
 
-    /*CString getadress();
+    CString getadress();
     Holls getHolls();
     void setAdress(CString adress);
-    void setHolls(Holls holls);*/
+    void setHolls(Holls holls);
 };
 
 //void WriteUsersData(const Users& users, const char* filename)

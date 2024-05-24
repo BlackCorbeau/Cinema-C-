@@ -137,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModelsFilmRealisation.cpp" />
+    <ClCompile Include="ModelsHollRealisation.cpp" />
     <ClCompile Include="ModelsUserRealisation.cpp" />
   </ItemGroup>
   <ItemGroup>
