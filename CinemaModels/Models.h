@@ -23,18 +23,18 @@ public:
     ~Film();
 
     CTime getTimeOfGoes();
-    //float getRate();
-    //CString getName();
-    //CString getType();
-    //int getCostForTicket();
-    //CDate getliveBefore();
+    float getRate();
+    CString getName();
+    CString getType();
+    int getCostForTicket();
+    CDate getliveBefore();
 
     void setTimeOfGoes(CTime T);
-    //void setRate(float R);
-    //void setName(CString str);
-    //void setType(CString str);
-    //void setCostForTicket(int cost);
-    //void setliveBefore(CDate date);*/
+    void setRate(float R);
+    void setName(CString str);
+    void setType(CString str);
+    void setCostForTicket(int cost);
+    void setliveBefore(CDate date);
 };
 enum Holl_state { Empty = 1, Full =2, Not_Empty=3, Already=4 };
 class Holl // обьект создается
