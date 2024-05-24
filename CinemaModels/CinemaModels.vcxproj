@@ -136,6 +136,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ModelsAdminRealisation.cpp" />
+    <ClCompile Include="ModelsCinemaModels.cpp" />
     <ClCompile Include="ModelsFilmRealisation.cpp" />
     <ClCompile Include="ModelsHollRealisation.cpp" />
     <ClCompile Include="ModelsUserRealisation.cpp" />
