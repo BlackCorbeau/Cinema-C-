@@ -4,11 +4,11 @@ Cinema::Cinema()
 {
 	CString adr;
 	adress = adr;
-	Holl h;
+	Holls h;
 	hols = h;
 }
 
-Cinema::Cinema(CString adress, Holl holls)
+Cinema::Cinema(CString adress, Holls holls)
 {
 	this->adress = adress;
 	this->hols = holls;

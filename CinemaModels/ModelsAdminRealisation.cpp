@@ -1,10 +1,12 @@
 #include "Models.h"
 #include <iostream>
 
-Admin::Admin(int id, CString password)
+Admin::Admin(int id, CString password, CString name, CString surename)
 {
 	this->id = id;
 	this->Password = password;
+	this->name = name;
+	this->surename = surename;
 }
 
 Admin::~Admin()
@@ -32,6 +34,26 @@ void Admin::set_password(CString str)
 	Password = str;
 }
 
+CString Admin::get_name()
+{
+	return name;
+}
+
+CString Admin::get_surename()
+{
+	return surename;
+}
+
+void Admin::set_name(CString name)
+{
+	this->name = name;
+}
+
+void Admin::set_surename(CString surename)
+{
+	this->surename = surename;
+}
+
 Film Admin::createFilm()
 {
 	Film nf;
@@ -44,12 +66,30 @@ Film Admin::createFilm(CTime timeofgoes, float rate, CString name, CString type,
 	return nf;
 }
 
-void Admin::redactFilm(Film& f, int i)
-{
-	
-}
-
 void Admin::deleteFilm(Film& f)
 {
 	f.~Film();
 }
+
+Holl Admin::createHoll()
+{
+	Holl h;
+	return h;
+}
+
+Holl Admin::createHoll(Film F, CTime starttime, CTime finishtime, int countofsits, Holl_state s)
+{
+	Holl h(F, starttime, finishtime, countofsits, s);
+	return h;
+}
+
+void Admin::redactHole(Holl& h, int i)
+{
+
+}
+
+void Admin::deleteHoll(Holl& h)
+{
+	h.~Holl();
+}
+
